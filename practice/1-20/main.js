@@ -24,12 +24,19 @@ function displayTasks() {
 addTask("Wash clothes");
 addTask("Do the dishes");
 addTask("Go for walk");
-addTask("");
 displayTasks();
-deleteTask(2)
-displayTasks();
+
+const removed = deleteTask(2)
+console.log(`${removed} was removed`);
+
+try {
+  deleteTask(42)
+} catch (error) {
+  console.log(error.message)
+}
+
+console.log(getTasksAsJson());
 printTasksFromJson();
-clearTasks();
 
 
 

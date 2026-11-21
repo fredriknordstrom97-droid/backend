@@ -711,8 +711,9 @@ The import path needs the file ending: `'./todo.js'`, not `'./todo'`.
 
 ## Challenge
 
-Turn the module into a class `TodoList` with the same methods, export it, and create two lists in `main.js`. What
-changes in the tests? Do you still need `clearTasks()`?
+Add a function `findTasks(word)` to the module that returns the tasks whose text contains the word, and an empty
+array when none does. Write the test first, then the function, and use it from `main.js`. Look at `filter()` and
+`includes()` on MDN.
 
 ## Read more
 

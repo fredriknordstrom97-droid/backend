@@ -70,9 +70,12 @@ You are in the root of your repo. Install the packages the project uses:
 npm install
 ```
 
-This reads `package.json` and puts the packages in `node_modules/`. If it stops with `EBADENGINE`, your Node.js is
-older than the course needs: go back to 1-05 and install v26. That directory is not committed (see
+This reads `package.json` and puts the packages in `node_modules/`. That directory is not committed (see
 `.gitignore`); anyone who clones the repo runs `npm install` instead.
+
+If it stops with `EBADENGINE`, your Node.js is older than the course needs: go back to 1-05 and install v26. If it ends
+with a line like "3 moderate severity vulnerabilities", leave it: it concerns the tools that check your code, not the
+app, and `npm audit fix` is not needed.
 
 Open `package.json` and look at `scripts`. Run the check:
 
@@ -105,7 +108,8 @@ Open the repo in your editor and find these:
 - `public/`: static files (HTML, CSS, images) for the app.
 - `practice/`: small exercises that stand on their own, one directory each.
 - `report/`: one report per week. You fill in `week-01.md` at the end of this week.
-- `exercise/` and `doc/`: the exercises and articles. New ones arrive each week.
+- `exercise/` and `doc/`: the exercises and articles. New ones arrive each week. `doc/troubleshooting.md` collects
+  the problems that show up in more than one exercise.
 - `CLAUDE.md` and `AGENTS.md`: context for an AI assistant (Claude Code, Codex, Copilot and others), so it helps you
   learn instead of writing your code. Read `CLAUDE.md` once; it is yours to change.
 
@@ -131,7 +135,7 @@ sends the new material there too.
 
 Later in the course you have commits of your own when you pull. Then Git merges the new material with your work and
 makes a *merge commit*. It may open an editor with a message for it; the message is fine as it is, so save and close
-the editor. In Vim, the default editor of Git Bash, type `:wq` and press Enter. To skip the editor, pull with
+the editor. If it opens in Vim, type `:wq` and press Enter. To skip the editor, pull with
 `git pull --no-edit upstream main`.
 
 ## Check and commit
